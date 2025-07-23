@@ -14,7 +14,19 @@ import { Font } from 'astro:assets';
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+				<div class="bg-gray-100 p-4 rounded">
+					<h3>Columna 1</h3>
+					<p>Contenido de la primera columna</p>
+				</div>
+				<div class="bg-gray-100 p-4 rounded">
+					<h3>Columna 2</h3>
+					<p>Contenido de la segunda columna</p>
+				</div>
+			</div>
+			<slot />
+		</div>
 	</body>
 </html>
 
