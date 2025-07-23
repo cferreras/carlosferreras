@@ -13,14 +13,15 @@ import { Font } from "astro:assets";
     <Font cssVariable="--font-inter" preload />
     <title>Astro Basics</title>
   </head>
-  <body>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-        <div class="p-4 rounded">
-          <h3>Columna 1</h3>
-          <p>Contenido de la primera columna</p>
+  <body class="antialiased">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mt-20">
+        <div class="rounded space-y-2">
+          <h1 class="text-5xl font-bold">Carlos Ferreras</h1>
+          <h3 class="text-xl font-semibold">Desarrollador Front End</h3>
+		  <p class="text-gray-600 leading-relaxed w-96 text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, soluta!</p>
         </div>
-        <div class="p-4">
+        <div class="text-lg">
           <slot />
         </div>
       </div>
