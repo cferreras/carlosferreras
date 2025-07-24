@@ -15,25 +15,25 @@ import { Font } from "astro:assets";
     <title>Astro Basics</title>
   </head>
   <body
-    class="antialiased bg-gradient-to-br from-slate-100 to-slate-200 h-screen overflow-hidden"
+    class="antialiased bg-gradient-to-br from-slate-900 to-slate-800 h-screen overflow-hidden text-white"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl h-full">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 h-full pt-20">
         <div class="space-y-3">
-          <h1 class="text-5xl font-extrabold bg-gradient-to-r text-slate-700">
+          <h1 class="text-5xl font-extrabold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
             Carlos Ferreras
           </h1>
-          <h3 class="text-xl font-semibold text-slate-700">
+          <h3 class="text-xl font-semibold text-slate-200">
             Desarrollador Front End
           </h3>
-          <p class="text-slate-600 leading-relaxed w-96 text-lg mt-4">
+          <p class="text-slate-300 leading-relaxed w-96 text-lg mt-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
             soluta!
           </p>
           <Toc />
         </div>
 
-        <main class="text-lg text-slate-700">
+        <main class="text-lg text-slate-200">
           <slot />
         </main>
       </div>
