@@ -1,46 +1,89 @@
-# Astro Starter Kit: Basics
+# Carlos Ferreras - Portfolio
 
-```sh
-pnpm create astro@latest -- --template basics
+Portfolio personal de Carlos Ferreras, desarrollador frontend especializado en crear experiencias web modernas y profesionales.
+
+## 🚀 Tecnologías
+
+- **[Astro](https://astro.build)** - Framework web moderno para sitios rápidos
+- **[Tailwind CSS](https://tailwindcss.com)** - Framework CSS utility-first
+- **[TypeScript](https://www.typescriptlang.org)** - JavaScript con tipado estático
+- **[Vercel](https://vercel.com)** - Plataforma de deployment
+
+## ✨ Características
+
+- ⚡ **Rendimiento optimizado** - Sitio estático generado con Astro
+- 📱 **Diseño responsive** - Adaptado para todos los dispositivos
+- 🎨 **Diseño minimalista** - Interfaz limpia y profesional
+- 🔍 **SEO optimizado** - Meta tags, sitemap y datos estructurados
+- ♿ **Accesible** - Cumple con estándares de accesibilidad web
+- 🌙 **Tema oscuro** - Diseño elegante con colores oscuros
+
+## 🛠️ Desarrollo
+
+### Requisitos previos
+
+- Node.js 18+ 
+- pnpm (recomendado) o npm
+
+### Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/cferreras/carlosferreras.git
+
+# Navegar al directorio
+cd carlosferreras
+
+# Instalar dependencias
+pnpm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Comandos disponibles
 
-## 🚀 Project Structure
+| Comando | Descripción |
+|---------|-------------|
+| `pnpm dev` | Inicia el servidor de desarrollo en `localhost:4321` |
+| `pnpm build` | Construye el sitio para producción en `./dist/` |
+| `pnpm preview` | Previsualiza la build localmente |
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estructura del proyecto
 
-```text
+```
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── favicon.svg
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src/
+│   ├── components/
+│   │   ├── About.astro
+│   │   ├── Experience.astro
+│   │   ├── Projects.astro
+│   │   └── Toc.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Deployment
 
-## 🧞 Commands
+El sitio está configurado para deployment automático en Vercel:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+# Deploy a producción
+npx vercel --prod
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## 📧 Contacto
 
-## 👀 Want to learn more?
+- **Email**: [carlos@carlosferreras.com](mailto:carlos@carlosferreras.com)
+- **LinkedIn**: [carlos-ferreras](https://www.linkedin.com/in/carlos-ferreras/)
+- **GitHub**: [cferreras](https://github.com/cferreras)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+Desarrollado con ❤️ por Carlos Ferreras
