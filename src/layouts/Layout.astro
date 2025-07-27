@@ -5,39 +5,38 @@ import { Font } from "astro:assets";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <Font cssVariable="--font-inter" preload />
-    <title>Astro Basics</title>
+    <title>Carlos Ferreras - Desarrollador Frontend</title>
   </head>
-  <body
-    class="antialiased bg-gradient-to-br from-slate-900 to-slate-800 min-h-screen text-white"
-  >
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl min-h-screen">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 min-h-screen py-8 pt-20">
+  <body class="antialiased bg-gray-900 text-white min-h-screen">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <!-- Sidebar izquierdo -->
-        <div class="lg:sticky lg:top-8 lg:h-fit space-y-6">
-          <div class="space-y-3">
-            <h1 class="text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-              Carlos Ferreras
-            </h1>
-            <h3 class="text-lg lg:text-xl font-semibold text-slate-200">
-              Desarrollador Front End
-            </h3>
-            <p class="text-slate-300 leading-relaxed max-w-md text-base lg:text-lg">
-              Apasionado por crear experiencias web modernas y atractivas. 
-              Especializado en React, Vue, Astro y las últimas tecnologías frontend.
-            </p>
+        <div class="lg:sticky lg:top-12 lg:h-fit">
+          <div class="space-y-8">
+            <div>
+              <h1 class="text-3xl font-bold text-white mb-2">
+                Carlos Ferreras
+              </h1>
+              <h2 class="text-lg text-gray-300 mb-4">
+                Desarrollador Frontend
+              </h2>
+              <p class="text-gray-400 leading-relaxed">
+                Especializado en crear experiencias web modernas con React, Vue y Astro.
+              </p>
+            </div>
+            <Toc />
           </div>
-          <Toc />
         </div>
 
         <!-- Contenido principal -->
-        <main class="text-base lg:text-lg text-slate-200">
+        <main class="lg:col-span-2">
           <slot />
         </main>
       </div>

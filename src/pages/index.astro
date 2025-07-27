@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="space-y-8 pb-8">
+  <div class="space-y-16">
     <div id="about">
       <About />
     </div>
@@ -20,13 +20,13 @@ import Layout from "../layouts/Layout.astro";
     </div>
     
     <!-- Footer -->
-    <footer class="mt-16 pt-8 border-t border-slate-700/50">
-      <div class="text-center text-sm">
-        <p class="text-slate-300">
-          Web programada en <a href="https://trae.ai" target="_blank" rel="noopener noreferrer" class="text-white hover:text-slate-200 transition-colors font-medium">Trae</a>. 
-          Construida con <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-white hover:text-slate-200 transition-colors font-medium">Astro</a> 
-          y <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-slate-200 transition-colors font-medium">Tailwind CSS</a>, 
-          desplegada con <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-slate-200 transition-colors font-medium">Vercel</a>.
+    <footer class="pt-8 border-t border-gray-700">
+      <div class="text-center text-sm text-gray-400">
+        <p>
+          Web programada en <a href="https://trae.ai" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">Trae</a>. 
+          Construida con <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">Astro</a> 
+          y <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">Tailwind CSS</a>, 
+          desplegada con <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">Vercel</a>.
         </p>
       </div>
     </footer>
@@ -34,7 +34,6 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script>
-  // Smooth scrolling para los enlaces del TOC
   document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     
