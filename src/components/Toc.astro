@@ -1,63 +1,98 @@
 <nav class="w-full hidden lg:block" id="toc-nav">
     <ul class="space-y-2">
         <li>
-            <a href="#about" data-section="about" class="toc-link block py-2 text-gray-400 hover:text-white transition-colors">
-                Sobre mí
+            <a
+                href="#about"
+                data-section="about"
+                class="group flex items-center py-3 text-sm font-medium transition-all"
+            >
+                <span
+                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-teal-300"
+                ></span>
+                <span
+                    class="nav-text text-slate-light group-hover:text-teal-300"
+                    >Sobre mí</span
+                >
             </a>
         </li>
-        
+
         <li>
-            <a href="#experience" data-section="experience" class="toc-link block py-2 text-gray-400 hover:text-white transition-colors">
-                Experiencia
+            <a
+                href="#experience"
+                data-section="experience"
+                class="group flex items-center py-3 text-sm font-medium transition-all"
+            >
+                <span
+                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-teal-300"
+                ></span>
+                <span
+                    class="nav-text text-slate-light group-hover:text-teal-300"
+                    >Experiencia</span
+                >
             </a>
         </li>
-        
+
         <li>
-            <a href="#projects" data-section="projects" class="toc-link block py-2 text-gray-400 hover:text-white transition-colors">
-                Proyectos
+            <a
+                href="#projects"
+                data-section="projects"
+                class="group flex items-center py-3 text-sm font-medium transition-all"
+            >
+                <span
+                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-teal-300"
+                ></span>
+                <span
+                    class="nav-text text-slate-light group-hover:text-teal-300"
+                    >Proyectos</span
+                >
             </a>
         </li>
     </ul>
 </nav>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('[id]');
-    const tocLinks = document.querySelectorAll('.toc-link');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: 0
-    };
-    
-    function updateActiveLink(activeId: string) {
-        tocLinks.forEach(link => {
-            const section = link.getAttribute('data-section');
-            if (section === activeId) {
-                link.classList.remove('text-gray-400');
-                link.classList.add('text-white');
-            } else {
-                link.classList.remove('text-white');
-                link.classList.add('text-gray-400');
-            }
-        });
-    }
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                updateActiveLink(entry.target.id);
-            }
-        });
-    }, observerOptions);
-    
-    sections.forEach(section => {
-        if (['about', 'experience', 'projects'].includes(section.id)) {
-            observer.observe(section);
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("div[id]");
+        const tocLinks = document.querySelectorAll("a[data-section]");
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px 0px -50% 0px",
+            threshold: 0.1,
+        };
+
+        function updateActiveLink(activeId: string) {
+            tocLinks.forEach((link) => {
+                const section = link.getAttribute("data-section");
+                const indicator = link.querySelector(".nav-indicator");
+                const text = link.querySelector(".nav-text");
+
+                if (section === activeId) {
+                    indicator?.classList.add("w-16", "bg-teal-300");
+                    indicator?.classList.remove("bg-slate-600");
+                    text?.classList.add("text-teal-300");
+                    text?.classList.remove("text-slate-light");
+                } else {
+                    indicator?.classList.remove("w-16", "bg-teal-300");
+                    indicator?.classList.add("bg-slate-600");
+                    text?.classList.remove("text-teal-300");
+                    text?.classList.add("text-slate-light");
+                }
+            });
         }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateActiveLink(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((section) => {
+            if (["about", "experience", "projects"].includes(section.id)) {
+                observer.observe(section);
+            }
+        });
     });
-    
-    updateActiveLink('about');
-});
 </script>
